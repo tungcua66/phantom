@@ -19,6 +19,16 @@ module.exports = {
 		'react',
 	],
 	rules: {
+		'import/extensions': [
+			'error',
+			'ignorePackages',
+			{
+				js: 'always',
+				jsx: 'never',
+				ts: 'never',
+				tsx: 'never',
+			},
+		],
 		// 'jsx-a11y/label-has-for': 0,
 		'jsx-a11y/label-has-associated-control': ['error', {
 			required: {
@@ -51,16 +61,8 @@ module.exports = {
 		'max-len': ['warn', 110],
 		'no-plusplus': 0,
 		'no-console': 'off',
-		'no-restricted-syntax': ['error', {
-			selector: "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
-			message: 'Unexpected property on console object was called',
-		}],
 		'no-nested-ternary': 0,
 		'jsx-a11y/click-events-have-key-events': 'off',
-		'import/no-cycle': 'off',
-		// add Vincent -> Flow gestion with defaultProps is internal and not external
-		// https://github.com/facebook/flow/issues/1660
-		// https://github.com/facebook/flow/issues/3512
 		'react/require-default-props': [2, {
 			forbidDefaultForRequired: false,
 		}],

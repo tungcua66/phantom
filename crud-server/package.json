@@ -28,5 +28,10 @@
   },
   "scripts": {
     "devStart": "nodemon index.js"
+  },
+  "resolve": {
+    "extensions": [
+      ".js"
+    ]
   }
 }

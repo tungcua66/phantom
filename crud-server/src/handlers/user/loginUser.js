@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import Boom from '@hapi/boom';
-import createToken from '../../helpers/createToken';
-import User from '../../model/User';
+import createToken from '../../helpers/createToken.js';
+import User from '../../model/User.js';
 
 export default async (request) => {
 	try {

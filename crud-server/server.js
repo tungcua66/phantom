@@ -2,8 +2,8 @@ import Hapi from '@hapi/hapi';
 import Mongoose from 'mongoose';
 import Jwt from '@hapi/jwt';
 
-import registerUser from './src/handlers/user/registerUser';
-import loginUser from './src/handlers/user/loginUser';
+import registerUser from './src/handlers/user/registerUser.js';
+import loginUser from './src/handlers/user/loginUser.js';
 
 const hostPort = process.env.HOST_PORT;
 const host = process.env.HOST;
