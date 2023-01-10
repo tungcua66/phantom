@@ -42,10 +42,10 @@ module.exports = {
 				some: ['nesting', 'id'],
 			},
 		}],
-		indent: [2, 'tab', {
-			SwitchCase: 1,
-			VariableDeclarator: 1,
-		}],
+		// indent: [2, 'tab', {
+		// 	SwitchCase: 1,
+		// 	VariableDeclarator: 1,
+		// }],
 		'react/function-component-definition': 0,
 		'react/jsx-uses-react': 'off',
 		'react/react-in-jsx-scope': 'off',
