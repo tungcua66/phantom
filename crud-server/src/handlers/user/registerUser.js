@@ -15,6 +15,6 @@ export default async (request) => {
 		const token = createToken();
 		return `${user.login} created. ${token}`;
 	} catch (error) {
-		return Boom.badRequest('error.message');
+		return Boom.badRequest(error);
 	}
 };
