@@ -21,16 +21,17 @@ module.exports = {
 		'react',
 	],
 	rules: {
-		'import/extensions': [
-			'error',
-			'ignorePackages',
-			{
-				js: 'never',
-				jsx: 'never',
-				ts: 'never',
-				tsx: 'never',
-			},
-		],
+		"import/extensions": 0,
+		// 'import/extensions': [
+		// 	'error',
+		// 	'ignorePackages',
+		// 	{
+		// 		js: 'never',
+		// 		jsx: 'never',
+		// 		ts: 'never',
+		// 		tsx: 'never',
+		// 	},
+		// ],
 		// 'jsx-a11y/label-has-for': 0,
 		'jsx-a11y/label-has-associated-control': ['error', {
 			required: {
@@ -83,5 +84,26 @@ module.exports = {
 		'react/no-danger': 'error',
 		'no-empty-pattern': 'warn',
 		'linebreak-style': 0,
+		// "@typescript-eslint/naming-convention": [
+		// 	"warnings",
+		// 	{
+		// 	  "selector": "variable",
+		// 	  "format": [
+		// 		"camelCase",
+		// 	  ]
+		// 	},
+		// 	{
+		// 	  "selector": "function",
+		// 	  "format": [
+		// 		"camelCase",
+		// 	  ]
+		// 	},
+		// 	{
+		// 	  "selector": "typeLike",
+		// 	  "format": [
+		// 		"camelCase",
+		// 	  ]
+		// 	}
+		//   ]
 	},
 };

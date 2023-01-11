@@ -10,7 +10,7 @@ const Container = styled.div`
   	gap: 5px;
 `;
 
-const Button = styled.button`
+const Button = styled.button<{ backgroundColor: string }>`
 	background-color: ${({ backgroundColor }) => (backgroundColor)};
 	width: 200px;
 	height: 50px;
