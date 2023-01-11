@@ -4,7 +4,7 @@ import User from '../../model/User.js';
 export default async (request) => {
 	try {
 		const res = await User.findOne({ login: request.params.login })
-			.select({ password: 0, _id: 0 }).select('login role friends');
+			.select('login role friends -_id');
 		return res;
 	} catch (error) {
 		return Boom.badRequest('login not exist');
