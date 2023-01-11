@@ -4,6 +4,7 @@ import Jwt from '@hapi/jwt';
 
 import registerUser from './src/handlers/user/registerUser.js';
 import loginUser from './src/handlers/user/loginUser.js';
+import getUserByLogin from './src/handlers/user/getUserByLogin.js';
 
 const hostPort = process.env.HOST_PORT;
 const host = process.env.HOST;
@@ -58,6 +59,12 @@ const initDb = async () => {
 		method: 'POST',
 		path: '/login',
 		handler: loginUser,
+	});
+
+	server.route({
+		method: 'GET',
+		path: '/profile/{login}',
+		handler: getUserByLogin,
 	});
 
 	await server.start();
