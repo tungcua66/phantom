@@ -5,6 +5,8 @@ import Jwt from '@hapi/jwt';
 import registerUser from './src/handlers/user/registerUser.js';
 import loginUser from './src/handlers/user/loginUser.js';
 import getUserByLogin from './src/handlers/user/getUserByLogin.js';
+import addFriendHandler from './src/handlers/user/addFriendHandler.js';
+import deleteFriendHandler from './src/handlers/user/deleteFriendHandler.js';
 
 const hostPort = process.env.HOST_PORT;
 const host = process.env.HOST;
@@ -65,6 +67,24 @@ const initDb = async () => {
 		method: 'GET',
 		path: '/profile/{login}',
 		handler: getUserByLogin,
+	});
+
+	server.route({
+		method: 'PUT',
+		path: '/profile/{login}',
+		handler: getUserByLogin,
+	});
+
+	server.route({
+		method: 'PUT',
+		path: '/profile/{login}/addFriend/{_id}',
+		handler: addFriendHandler,
+	});
+
+	server.route({
+		method: 'PUT',
+		path: '/profile/{login}/deleteFriend/{_id}',
+		handler: deleteFriendHandler,
 	});
 
 	await server.start();
