@@ -5,11 +5,12 @@ dotenv.config();
 
 const tokenKey = process.env.TOKEN_KEY;
 
-export default () => {
+export default (admin) => {
 	const token = Jwt.token.generate({
 		aud: 'token',
 		iss: 'urn:issuer:test',
 		group: 'phantom_group',
+		admin,
 	}, {
 		key: tokenKey,
 		algorithm: 'HS512',

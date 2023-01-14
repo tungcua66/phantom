@@ -4,8 +4,6 @@ import User from '../../model/User.js';
 export default async (request) => {
 	try {
 		const user = await User.findOne({ login: request.params.login });
-		// const newFriend = await User.findOne({ _id: request.params._id })
-		// 	.select('_id');
 		if (!user.friends.includes(request.params._id)) return false;
 		const updatedUser = User.findOneAndUpdate(
 			{ _id: user._id },
