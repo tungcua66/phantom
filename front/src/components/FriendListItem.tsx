@@ -46,7 +46,7 @@ const FriendListItem: FC<Props> = ({ friend }) => (
 				{friend.role}
 			</h4>
 		</InfoContainer>
-		<DeleteButton icon={faTrash} onClick={onClickHandler} />
+		<DeleteButton icon={faTrash} />
 	</Container>
 );
 
